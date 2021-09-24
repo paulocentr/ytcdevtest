@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\NumberController;
+use App\Http\Controllers\SiteController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [SiteController::class, 'home'])->name('home');
+Auth::routes(['register' => false]);
+
+Route::middleware('auth')->name('auth.')->group(function() {
+    Route::resource('customers', CustomerController::class);
+    Route::resource('{customer}/numbers', NumberController::class);
 });
+
+
