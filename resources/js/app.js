@@ -7,6 +7,9 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+import 'vuejs-datatable/dist/themes/bootstrap-4.esm';
+import { VuejsDatatableFactory } from 'vuejs-datatable';
+Vue.use( VuejsDatatableFactory );
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,6 +23,12 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('customers-component', require('./components/CustomersComponent.vue').default);
+Vue.component('customersaddform-component', require('./components/AddCustomerComponent.vue').default);
+Vue.component('numbers-component', require('./components/NumbersComponent.vue').default);
+Vue.component('numbersaddform-component', require('./components/AddNumberComponent.vue').default);
+Vue.component('preferences-component', require('./components/PreferencesComponent.vue').default);
+Vue.component('preferencesaddform-component', require('./components/AddPreferenceComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

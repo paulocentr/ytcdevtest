@@ -24,7 +24,7 @@
                                                     <i class="far fa-envelope"></i>
                                                 </span>
                                             </div>
-                                            <input type="email" class="form-control" placeholder="Email" aria-label="User Email" aria-describedby="user-email-input" />
+                                            <input type="email" name="email" class="form-control" placeholder="Email" aria-label="User Email" aria-describedby="user-email-input" />
                                         </div>
                                         @error('email')
                                             <span class="help-block text-danger">{{ $message }}</span>
@@ -37,7 +37,7 @@
                                                     <i class="fas fa-key"></i>
                                                 </span>
                                             </div>
-                                            <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="user-password-input" />
+                                            <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="user-password-input" />
                                         </div>
                                         @error('password')
                                             <span class="help-block text-danger">{{ $message }}</span>

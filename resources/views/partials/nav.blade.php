@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse " id="navbarNavDropdown-3">
             <ul class="ml-auto navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-4 text-white " href="{{ route('auth.customers.index') }}">Customers</a>
+                    <a class="nav-link px-lg-3 py-lg-4 text-white " href="{{ url('customers') }}">Customers</a>
                 </li>
             </ul>
             @guest
